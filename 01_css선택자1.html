@@ -75,15 +75,16 @@
 
     <button>클릭!</button>
 
+    <!-- 자바스크립트는 추후 배울 예정이니 선택자를 알아둬야됨을 인지하자. -->
     <script type="text/javascript">
         let btn = document.querySelector('button');
 
         btn.onclick = () => {
             let testli = document.querySelectorAll('ul>li.class2');
 
-            for(let li = 0; li <  testli.length; li++) {
-                testli[li].style.backgroundColor = 'red';
-            }    
+            for(let li = 0; li < testli.length; li++) {
+                testli[li].style.backgroundcolor ='red';
+            }
         }
 
         window.onload = function() {
