@@ -24,6 +24,7 @@
             background: hotpink;    /* 인라인 선택자보다 우선순위가 낮기때문에 핫핑크 적용안됨 */
         }
 
+        /* !important를 적용하면 나머지 우선순위를 고려할 필요가 없다(다만, 모든 속성에 각각 따로 적용해줘야함) */
         #test2 {
             background:hotpink !important;  /* !important를 해주면 우선순위 제일 높아져서 적용됨 */
             color: white !important;    /* !important로 우선순위를 높게하려면 background,color 다 따로 !important를 해줘야 한다 */
