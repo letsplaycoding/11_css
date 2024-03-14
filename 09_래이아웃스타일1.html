@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .block {
+            width: 150px;
+            height: 130px;
+            border: 1px solid black;
+            color: white;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+
+        .area1 {
+            background: red;
+        
+        }
+        .area2 {
+            background:orange;
+        }
+        .area3 {
+            background:yellow;
+        }
+        .area4 {
+            background:green;
+        }
+        .area5 {
+            background:blue;
+        }
+        
+        .block-test1 { /* inline 요소는 width와 height를 따로 설정해도 적용되지않게 한다. */
+            display: inline;
+        }
+        .block-test2 {
+            display: inline-block;
+            margin-left: -6px;  /* 음수px값이 낮을수록 뭉쳐지고 양수로 값이 높을수록 벌어진다 */
+        }
+        .block-test3 {
+            display: block
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h3>화면 배치 방법 변경</h3>
+    <h4>블럭 요소를 인라인 요소로 변환</h4>
+    <p>블럭 요소와 인라인 요소의 속성을 변경하여 배치 방식을 변경할 수 있다.</p>
+    <!-- (div[class="block block-test1 area$"]{$ 번째 영역})*5 -->
+    <!-- class명이 동일하기때문에 클래스선택자로 .area$로 호출할 수 있다.(생략 .area$) -->
+    <div class="block block-test1 area1"><strong>1 번째 영역</strong></div>
+    <div class="block block-test1 area2"><strong>2 번째 영역</strong></div>
+    <div class="block block-test1 area3"><strong>3 번째 영역</strong></div>
+    <div class="block block-test1 area4"><strong>4 번째 영역</strong></div>
+    <div class="block block-test1 area5"><strong>5 번째 영역</strong></div>
+
+    <h4>블럭 요소를 인라인 블록 요소로 변환</h4>
+    <p>영역은 인라인 요소로 변경되지만 내용은 블럭요소가 되아 width와 height 속성을 설정할 수 있다.<br>
+        (다만, 요소 간에 작은 간격이 존재한다)
+    </p>
+    <div class="block block-test2 area1"><strong>1 번째 영역</strong></div>
+    <div class="block block-test2 area2"><strong>2 번째 영역</strong></div>
+    <div class="block block-test2 area3"><strong>3 번째 영역</strong></div>
+    <div class="block block-test2 area4"><strong>4 번째 영역</strong></div>
+    <div class="block block-test2 area5"><strong>5 번째 영역</strong></div>
+
+    <h4>인라인 요소를 블럭 요소로 변환</h4> 
+    <!-- span태그는 inline요소이다. 
+        display:block;값을 주지 않으면 현재 test1과 같은 모양이다(인라인 요소 태그임을 알 수 있다) 
+    -->
+    <p>인라인 요소를 블럭 요소로 변경하면 width와 height값을 지정할 수 있고 세로로 쌓인다.</p>
+    <span class="block block-test3 area1"><strong>1 번째 영역</strong></span>
+    <span class="block block-test3 area2"><strong>2 번째 영역</strong></span>
+    <span class="block block-test3 area3"><strong>3 번째 영역</strong></span>
+    <span class="block block-test3 area4"><strong>4 번째 영역</strong></span>
+    <span class="block block-test3 area5"><strong>5 번째 영역</strong></span>
+</body>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</html>
