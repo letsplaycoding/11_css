@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .tran1 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            border: 1px solid black;
+            transition-duration: 2s; /* tran1 -> tran1:hober 로 가는데 2초가 걸림 (동적) */
+        }
+
+        .tran1:hover {
+            width: 200px;
+            background: yellow;
+        }
+
+        .tran2 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            border: 1px solid black;
+            transition-property: background-color, transform, width, height;
+            transition-duration: 2s,3s,3s,3s; /* tran1 -> tran1:hober 로 가는데 2초가 걸림 (동적) */
+        }
+
+        .tran2:hover {
+            width: 200px;
+            height: 200px;
+            background: yellow;
+            transform: rotateZ(180deg); /* rotate => 회전하는 속성, 180deg => 180도 회전 */
+        }
+        .tran3 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            border: 1px solid black;
+            transition-duration: 2s;
+            transition-timing-function: ease;
+        }
+        .tran3:hover {
+            background: yellow;
+            transform: rotateZ(60deg);
+        }
+
+        .tran4 {
+            width: 100px;
+            height: 100px;
+            background: red;
+            border: 1px solid black;
+            transition-duration: 2s;    /* 유지되는 시간 */
+            transition-delay: 1s;   /* 갖다 대는 시간 */
+        }
+        .tran4:hover {
+            background: yellow;
+            transform: rotateZ(60deg);
+        }
+
+        .tran5 {
+            width: 100px;
+            height: 100px;
+            background: black;
+            border: 2px solid hotpink;
+            transition-property: background-color, transform, width, height;
+            transition-duration: 2s,3s,3s,3s;
+        }
+        .tran5:hover {
+            background: hotpink;
+            transform: rotateY(180deg);
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>트랜지션</h1>
+    <p>시간에 따라 웹 요소의 스타일 속성이 조금씩 바뀌는 것을 의미한다.</p>
+    <h3>트랜지션 진행 시간 지정하기</h3>
+    <div class="tran1"></div>
+
+    <hr>
+
+    <h3>트랜지션 진행 별 시간 설정하기</h3>
+    <div class="tran2"></div>
+
+    <h3>트랜지션 진행 별 속도 지정하기</h3>
+    <a href="https://www.codingfactory.net/10953#transition-timing-function">진행 과정별 상세 사이트</a>
+    <div class="tran3"></div>
+
+    <hr>
+
+    <h3>트랜지션 시간 지연시키기</h3>
+    <div class="tran4"></div>
+
+    <h4>하또</h4>
+    <div class="tran5"></div>
+</body>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</html>
