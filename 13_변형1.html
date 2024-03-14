@@ -57,19 +57,36 @@
             background: yellow;
             transform: rotateZ(60deg);
         }
-
-        .tran5 {
+        
+        .heart {
+            position: relative;
             width: 100px;
-            height: 100px;
-            background: black;
-            border: 2px solid hotpink;
-            transition-property: background-color, transform, width, height;
-            transition-duration: 2s,3s,3s,3s;
+            height: 90px;
+            transition-duration: 5s;    /* 유지되는 시간 */
+            transition-delay: 1s;
         }
-        .tran5:hover {
+        .heart:before,
+        .heart:after {
+            position: absolute;
+            content: "";
+            left: 50px;
+            top: 0;
+            width: 50px;
+            height: 80px;
             background: hotpink;
-            transform: rotateY(180deg);
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
         }
+        .heart:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+        .heart:hover {
+            transform: rotateY(1080deg);
+        }
+
     </style>
     <title>Document</title>
 </head>
@@ -94,7 +111,7 @@
     <div class="tran4"></div>
 
     <h4>하또</h4>
-    <div class="tran5"></div>
+    <div class="heart"></div>
 </body>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </html>
